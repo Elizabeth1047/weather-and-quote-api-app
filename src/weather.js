@@ -15,15 +15,18 @@ let getweatherinfo = () => {
       .then((item) => {
         info.innerHTML = `
         <h1 id="h4">${item.name}</h1>
+        <div>
         <h4 id="h3">${item.weather[0].main}</h4>
         <h4 id="h3">${item.weather[0].description}</h4>
         <img width="100px" src="https://openweathermap.org/img/w/${item.weather[0].icon}.png">
+        </div>
         <h1 id="h4">${item.main.temp}<sup>o</sup></h1>
+        <div>
         <h4 class="h3">max |
         min</h4>
         <h4 class="h3">${item.main.temp_max} |
         ${item.main.temp_max}</h4>
-        
+         </div>
      `;
       })
       .catch(() => {

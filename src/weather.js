@@ -7,12 +7,11 @@ let getweatherinfo = () => {
   let inputcityinfo = inputedcity.value;
   if (inputcityinfo.length === 0) {
     info.innerHTML = `<h3 id="h3">please input city!!!</h3>`;
-    inputedcity.value = ' ';
-   
+    inputedcity.value = " ";
   } else {
-    let url =
-      `https://api.openweathermap.org/data/2.5/weather?q=${inputcityinfo}&appid=${key}&units=metric`;
-      fetch(url).then((data) => data.json())
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${inputcityinfo}&appid=${key}&units=metric`;
+    fetch(url)
+      .then((data) => data.json())
       .then((item) => {
         info.innerHTML = `
         <h1 id="h4">${item.name}</h1>
@@ -26,9 +25,10 @@ let getweatherinfo = () => {
         ${item.main.temp_max}</h4>
         
      `;
-      }).catch(()=>{
-        info.innerHTML = `<h1 id="h3"> city not found!!!</h1>`;
       })
+      .catch(() => {
+        info.innerHTML = `<h1 id="h3"> city not found!!!</h1>`;
+      });
   }
 };
 window.addEventListener("load", getweatherinfo);

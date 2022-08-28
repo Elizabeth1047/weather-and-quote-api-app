@@ -47,7 +47,7 @@ body {
 }
 .bubbles span.three {
   animation-delay: 6.5s;
-  transform: scale(0.35);
+  transform: scale(5);
 }
 .bubbles span.four {
   animation-delay: 7.5s;
@@ -55,7 +55,7 @@ body {
 }
 .bubbles span.five {
   animation-delay: 5.5s;
-  transform: scale(1.5);
+  transform: scale(5);
 }
 .bubbles span.six {
   animation-delay: 4.5s;
@@ -64,16 +64,16 @@ body {
 
 .bubbles span.eight {
   animation-delay: 2.5s;
-  transform: scale(1.5);
+  transform: scale(0.5);
 }
-.bubbles span.nine {
+/* .bubbles span.nine {
   animation-delay: 4.5s;
   transform: scale(2.5);
 }
 .bubbles span.ten {
   animation-delay: 0.5s;
   transform: scale(5);
-}
+} */
 .bubbles span:before {
   content: "";
   position: absolute;
@@ -115,6 +115,7 @@ body {
 }
 
 .quotescontainer {
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   height: 50%;
   max-height: 300px;
   width: 80%;
@@ -147,7 +148,7 @@ body {
   margin: 20px;
   background-color: rgba(255, 255, 255, 0.3);
   text-align: center;
-  padding: 20px;
+  padding: 10px 10px;
   clear: both;
   margin: 0 auto;
   border-radius: 10px;
@@ -176,6 +177,7 @@ body {
   background-color: #e1ee;
   border-radius: 8px;
   color: white;
+
 }
 .inf {
   color: #e1ee;

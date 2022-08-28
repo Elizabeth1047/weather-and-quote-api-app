@@ -25,7 +25,7 @@ let getweatherinfo = () => {
         <h4 class="h3">max |
         min</h4>
         <h4 class="h3">${item.main.temp_max} |
-        ${item.main.temp_max}</h4>
+        ${item.main.temp_min}</h4>
          </div>
      `;
       })
@@ -35,4 +35,4 @@ let getweatherinfo = () => {
   }
 };
 window.addEventListener("load", getweatherinfo);
-btn.addEventListener("click", getweatherinfo);
+btn.addEventListener("click",  getweatherinfo);
